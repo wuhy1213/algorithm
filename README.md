@@ -1,4 +1,4 @@
-hello-world
-===========
-
-this is my first github repository
+this is a project for my algorithm exercise .
+Now it includes:
+1. binary search
+2. ...
