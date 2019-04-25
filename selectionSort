@@ -1,0 +1,30 @@
+void selectionSort(int *list, int listLen)
+{
+  int i, j;
+  int minData, minDataIndex;
+
+  // 确定"选择排序"需要比较的次数
+  for (i = 0; i < (listLen - 1); i++)
+  {
+    minData = list[i];
+    minDataIndex = i;
+
+    // 每一轮的比较: (比较的范围从"比较数list[i]"向后，一直到list最后一个item)
+    for (j = (i + 1); j < listLen； j++)
+    {
+      if (list[j] < minData)  //找到比minData小的item,并记录下来
+      {
+        minData = list[j];
+        minDataIndex = j;
+      }
+    }
+    // 如果找到比较小的数，那么才进行替换
+    if (minDataIndex != i)
+    {
+      list[minDataIndex] = list[i];
+      list[i] = minData;      
+    }
+    //END compare cycle
+  }
+  //END
+}
