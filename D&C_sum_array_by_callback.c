@@ -8,3 +8,7 @@ int sum(int *array, int index)
 		return sumValue;
 	}
 }
+
+
+基线条件：                          用变量index来记录当前处理的数组中的元素，直到index=0（即数组中的元素都处理完）
+如何缩小问题的规模以不断符合基线条件：  从列表的末尾往前推，每处理一个元素，index-1
